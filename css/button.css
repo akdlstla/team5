@@ -27,3 +27,24 @@
     cursor: pointer;
     background-color: rgba(51, 51, 51);;
 }
+
+
+
+#swipeBtn{
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    border-radius: 4px;
+    border: none;
+}
+
+#swipeBtn::after {
+    content: "\f054";
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 2em;
+    line-height: 28px;
+    color: #000;
+}
