@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/signup.css">
+</head>
+<body>
+    <div id="wrap" class="wrap">
+        <header class="header" role="banner">
+            <div class="header_inner">
+                <a href="" class="logo">
+                    <img class="logo_size" src="../images/STYLE_ON_LOGO.png" alt="">
+                </a>
+            </div>
+        </header>
+        <div class="content">
+            <div class="signup_wrap">
+                <div class="panel_wrap">
+                    <div class="panel_inner">
+
+                        <form action="./login.html" class="signup_form">
+                            <table class="signup_table">
+                                <tr>
+                                    <td><h2>회원가입</h2></td>
+                                </tr>
+                                <tr>
+                                    <td><p class="signup_info">회원이 되어 다양한 혜택을 경험해 보세요!</p></td>
+                                </tr>
+                                <tr><td class="signup_text">아이디</td></tr>
+                                <tr><td>
+                                    <div id="info__id">
+                                        <input type="text" class="signup_input signup_id">
+                                        <button class="id_check_btn">중복 확인</button>
+                                    </div>
+                                </td></tr>
+                                <tr><td class="signup_text">비밀번호</td></tr>
+                                <tr><td><input type="password" class="signup_input"></td></tr>
+                                <tr><td class="signup_text">비밀번호 확인</td></tr>
+                                <tr><td><input type="password" class="signup_input"></td></tr>
+                                <tr><td class="signup_text">이름</td></tr>
+                                <tr><td><input type="text" class="signup_input"></td></tr>
+                                <tr><td class="signup_text">생년월일</td></tr>
+                                <tr><td><input type="date" class="signup_input"></td></tr>
+                                <tr><td class="signup_text">이메일</td></tr>
+                                <tr>
+                                    <td><input type="text" class="signup_email"> @ 
+                                        <input type="text" class="signup_input signup_email_input">
+                                        <select class="signup_email_select">
+                                            <option disabled value="" selected>선택</option>
+                                            <option value="naver.com">naver.com</option>
+                                            <option value="gmail.com">gmail.com</option>
+                                            <option value="daum.net">daum.net</option>
+                                            <option value="nate.com">nate.com</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr><td>
+                                    <input type="submit" value="가입하기" class="signup_btn" onclick="alert('가입 성공!')">
+                                </td></tr>
+                            </table>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <h1>hello
+
+            </h1>
+        </footer>
+    </div>
+</body>
+</html>
