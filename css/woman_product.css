@@ -1,0 +1,11 @@
+
+main #product div{
+    display: flex;
+    width: 300px;
+    margin-right: 100px;
+    
+}
+main #product div img{
+    width: 300px;
+    height: 300px;
+}
