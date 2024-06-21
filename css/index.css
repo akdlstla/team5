@@ -1,0 +1,62 @@
+*{
+    margin: 0; padding: 0;
+}
+
+header #category{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+header #category ul{
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    padding: 30px;
+    margin: 0;
+    padding-right: 30px;
+}
+header #category ul li {
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+header #category ul li:not(:first-child):not(:last-child)::before{
+    content: "│"; /* 구분자 추가 */
+    position: absolute;
+    left: -28px; /* 위치 조정 (필요에 따라 조정) */
+    color: rgb(0, 0, 0, 0.3); /* 구분자 색상 */
+}
+
+header #category ul li a{
+    text-decoration: none;
+    color: #222;
+    font-size: 15px;
+    box-shadow: inset 0 0 0 0 #4a4e69;
+    border-radius: 3px;
+    margin: 0 -.25rem;
+    padding: 1px .25rem;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+
+header #category ul li a:hover {
+    box-shadow: inset 100px 0 0 0 #4a4e69;
+    color: white; 
+}
+
+header #category ul li #signUp{
+    background-color: #222;
+    margin-left: -10px;
+    padding: 8px;
+    border-radius: 5px;
+    color: white;
+    font-size: 13px;
+}
+
+#headerLogo{
+    width: 20%;
+    height: 20%;
+    padding-left: 30px;
+}
+
