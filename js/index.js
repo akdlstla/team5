@@ -83,3 +83,4 @@ truncateProductNames = () =>{
 }
 truncateProductNames();
 scrollFunction();
+// dd
