@@ -28,25 +28,36 @@
                                 <tr>
                                     <td><p class="signup_info">회원이 되어 다양한 혜택을 경험해 보세요!</p></td>
                                 </tr>
-                                <tr><td class="signup_text">아이디</td></tr>
+                                <tr>
+                                    <td class="signup_text">아이디</td>
+                                    <td class="signup_duplication signup_text id_message">사용할 수 없는 아이디입니다.</td>
+                                </tr>
                                 <tr><td>
                                     <div id="info__id">
-                                        <input type="text" class="signup_input signup_id">
+                                        <input type="text" class="signup_input signup_id" placeholder=" 아이디 입력(6~20자)">
                                         <button class="id_check_btn">중복 확인</button>
                                     </div>
                                 </td></tr>
-                                <tr><td class="signup_text">비밀번호</td></tr>
-                                <tr><td><input type="password" class="signup_input"></td></tr>
-                                <tr><td class="signup_text">비밀번호 확인</td></tr>
-                                <tr><td><input type="password" class="signup_input"></td></tr>
-                                <tr><td class="signup_text">이름</td></tr>
-                                <tr><td><input type="text" class="signup_input"></td></tr>
-                                <tr><td class="signup_text">생년월일</td></tr>
-                                <tr><td><input type="date" class="signup_input"></td></tr>
-                                <tr><td class="signup_text">이메일</td></tr>
+                                <tr><td class="signup_text">비밀번호</td>
+                                    <td class="signup_duplication signup_text pw_message">20자 이내의 비밀번호를 입력해주세요</td>
+                                </tr>
+                                <tr><td><input type="password" class="signup_input signup_pw_in" placeholder=" 비밀번호 입력(문자,숫자,특수문자 포함 8~20자)"></td></tr>
                                 <tr>
-                                    <td><input type="text" class="signup_email"> @ 
-                                        <input type="text" class="signup_input signup_email_input">
+                                    <td class="signup_text">비밀번호 확인</td>
+                                    <td class="signup_duplication signup_text repw_message">비밀번호가 일치하지 않습니다.</td>
+                                </tr>
+                                <tr><td><input type="password" class="signup_input signup_re_pw_in" placeholder=" 비밀번호 재입력"></td></tr>
+                                <tr><td class="signup_text">이름</td></tr>
+                                <tr><td><input type="text" class="signup_input signup_name" placeholder=" 이름을 입력해주세요"></td></tr>
+                                <tr><td class="signup_text">생년월일</td></tr>
+                                <tr><td><input type="date" class="signup_input signup_date"></td></tr>
+                                <tr>
+                                    <td class="signup_text">이메일</td>
+                                   
+                                </tr>
+                                <tr>
+                                    <td><input type="text" class="signup_email" placeholder=" 이메일 주소"> @ 
+                                        <input type="text" class="signup_input signup_email_input" placeholder="naver.com">
                                         <select class="signup_email_select">
                                             <option disabled value="" selected>선택</option>
                                             <option value="naver.com">naver.com</option>
@@ -57,7 +68,7 @@
                                     </td>
                                 </tr>
                                 <tr><td>
-                                    <input type="submit" value="가입하기" class="signup_btn" onclick="alert('가입 성공!')">
+                                    <input type="submit" value="가입하기" class="signup_btn">
                                 </td></tr>
                             </table>
                         </form>
@@ -71,5 +82,6 @@
             </h1>
         </footer>
     </div>
+    <script src="../js/signup.js"></script>
 </body>
 </html>

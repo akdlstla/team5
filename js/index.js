@@ -18,12 +18,13 @@ function topFunction() {
     });
 }
 
+
 truncateProductNames = () =>{
     productNames.forEach(productName=>{
         const productNameVal = productName.textContent.split('');
 
         if(productNameVal.length>25){
-            productName.textContent = productNameVal.slice(0,20).join('')+'...';
+            productName.textContent = productNameVal.slice(0,20).join('')+' ...';
         }
 
     });

@@ -1,37 +1,82 @@
-"use strict";
-document.addEventListener('DOMContentLoaded', (event) => {
-    const idInput = document.getElementById('id');
-    const pwInput = document.getElementById('pw');
-    const keepCheckbox = document.getElementById('keep');
-    const loginButton = document.getElementById('login_btn');
+const idIn = document.querySelector('.id_input');
+const pwIn = document.querySelector('.pw_input');
+const keep = document.querySelector('.keep');
+const loginBtn = document.querySelector('.login_btn');
 
-    // localStorage에서 아이디를 가져와서 입력 필드에 채우기
-    const savedId = localStorage.getItem('savedId');
-    if (savedId) {
-        idInput.value = savedId;
-        keepCheckbox.checked = true; // 체크박스도 체크 상태로 설정
+window.addEventListener('load', () => {
+    const length = window.localStorage.length;
+    for (let i = 0; i < length; i++) {
+        const key = `user${i}`;
+        const userData = JSON.parse(window.localStorage.getItem(key));
+        if (userData.keep) {
+            // 로그인 상태가 유지되어야 할 경우 id와 pw를 입력란에 표시
+            idIn.value = userData.id;
+            pwIn.value = userData.pw;
+            // keep.checked 상태에 따라 스타일 적용
+            if (userData.keep) {
+                keep.value = 'on';
+                // document.querySelector('.keep_check .keep_text').style.color = '#333';
+                updateKeepState(false);
+            } else {
+                keep.value = 'off';
+                // document.querySelector('.keep_check .keep_text').style.color = '#777';
+                updateKeepState(false);
+            }
+            return;
+        }
+    }
+});
+
+
+// 로그인 버튼 클릭 시 실행되는 코드
+loginBtn.addEventListener('click', () => {
+    const idVal = idIn.value;
+    const pwVal = pwIn.value;
+
+    const length = window.localStorage.length;
+    for (let i = 0; i < length; i++) {
+        const key = `user${i}`;
+        const userData = JSON.parse(window.localStorage.getItem(key));
+        if (userData.id === idVal) {
+            if (userData.pw === pwVal) {
+                alert('로그인 성공!');
+                userData.logIn = true; // 로그인 상태를 true로 변경
+                window.localStorage.setItem(key, JSON.stringify(userData));
+                window.location.href = './index.html'; // index 페이지로 이동
+                return;
+            } else {
+                alert('비밀번호가 일치하지 않습니다.');
+                return;
+            }
+        }
     }
 
-    loginButton.addEventListener('click', () => {
-        const id = idInput.value;
-        const pw = pwInput.value;
-        const keepLoggedIn = keepCheckbox.checked;
-
-        if (id && pw) {
-            // 로그인 상태 유지 체크박스가 체크되어 있으면 아이디를 localStorage에 저장
-            if (keepLoggedIn) {
-                localStorage.setItem('savedId', id);
-            } else {
-                localStorage.removeItem('savedId');
-            }
-
-            // 로그인 처리 (예: 서버로 아이디와 비밀번호 전송)
-            console.log('로그인 시도:', id, pw);
-
-            // 실제 로그인 처리는 서버와의 통신이 필요함
-            // 예: fetch('/login', { method: 'POST', body: JSON.stringify({ id, pw }) })
-        } else {
-            alert('아이디와 비밀번호를 입력하세요.');
-        }
-    });
+    alert('존재하지 않는 아이디입니다.');
 });
+
+// 체크박스 클릭 시 실행되는 코드
+keep.addEventListener('click', () => {
+    if (keep.checked) {
+        keep.value = "on";
+        document.querySelector('.keep_check .keep_text').style.color = '#333';
+        updateKeepState(true); // keep 상태를 true로 업데이트
+    } else {
+        keep.value = "off";
+        document.querySelector('.keep_check .keep_text').style.color = '#777';
+        updateKeepState(false); // keep 상태를 false로 업데이트
+    }
+});
+
+// 로그인 상태 업데이트 함수
+function updateKeepState(newState) {
+    const length = window.localStorage.length;
+    for (let i = 0; i < length; i++) {
+        const key = `user${i}`;
+        const userData = JSON.parse(window.localStorage.getItem(key));
+        if (userData.id === idIn.value) {
+            userData.keep = newState; // newState 값에 따라 로그인 상태를 설정
+            window.localStorage.setItem(key, JSON.stringify(userData));
+            break;
+        }
+    }
+}

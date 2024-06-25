@@ -43,7 +43,7 @@ html{
     background-position: 0 -51px;
     background-repeat: no-repeat;
     width: 300px;
-    height: 180px;
+    height: 200px;
     
 }
 .logo_size{
@@ -76,6 +76,14 @@ html{
 }
 .signup_text{
     font-weight:500;
+    display: inline-block;
+}
+.signup_duplication{
+    margin-left: 10px;
+    color: #ca1010;
+    font-size: 12px;
+    padding-top: 3px;
+
 }
 .signup_table {
     position: relative;

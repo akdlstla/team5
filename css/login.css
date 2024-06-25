@@ -157,14 +157,14 @@ label::before {
     display: block;
     width: 15px;
     height: 15px;
-    background-image: url('../images/check-box.png');
+    background-image: url('../images/checked-box.png');
     background-size: contain;
     float: left;
     margin-right: 8px;
 }
 
 .keep:checked + label::before {
-    background-image: url('../images/checked-box.png');
+    background-image: url('../images/check-box.png');
     background-size: contain;
 }
 
@@ -221,6 +221,9 @@ label::before {
     font-weight: 700;
 }
 
+.id_input,.pw_input{
+    width: 100%;
+}
 .blind{
     position:absolute;
 
