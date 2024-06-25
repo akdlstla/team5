@@ -228,6 +228,69 @@ label::before {
     position:absolute;
 
 }
+
+/* 푸터 스타일 */
+
+footer{
+    margin-top: 100px;
+}
+#footer .notice_Area{
+    width: 95%;
+    margin: 0 auto;
+    border-top: 1px solid #e2e2e2;
+}
+
+#footer .notice_Area .noticebox{
+    display: flex;
+    font-size: 12px;
+    margin: 20px 0px;
+}
+
+#footer .notice_Area .noticebox .title{
+    font-weight: bolder;
+
+}
+#footer .notice_Area .noticebox a, a:visited{
+    margin: auto 20px;
+    color: #000;
+    text-decoration: none !important;
+}
+.corp_area {
+    width: 95%;
+    margin: 0 auto;
+}
+.corp_area .list_corp{
+    border-top: 1px solid #e2e2e2;
+    margin: 0 auto;
+    text-align: center;
+}
+.corp_area .list_corp li{
+    list-style: none;
+    display: inline-block;
+    margin: 10px 0px 20px 0px;
+}
+.corp_area .list_corp li:not(:first-child)::before{
+    content: "│"; 
+    position: relative;
+    left: -1px; 
+    color: #e2e2e2; /* 구분자 색상 */
+    background-color: white;
+}
+.corp_area .list_corp li a, a:visited{
+    color: #e2e2e2;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.corp_area .addr{
+    text-align: center;
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+.corp_area .addr a, a:visited{
+    color: #e2e2e2;
+    text-decoration: none;
+}
 .wrap{
     position: relative;
     height: 100%;
