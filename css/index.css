@@ -2,6 +2,8 @@
     margin: 0; padding: 0;
 }
 
+/* 헤더 */
+
 header{
     margin-bottom: 0;
 }
@@ -56,14 +58,18 @@ header #category ul li #signUp{
     font-size: 13px;
 }
 
-#headerLogo{
+/* 로고 스타일 */
+
+#headerLogo{ 
     width: 90px;
     height: 100%;
     padding-top: 10px;
     padding-left: 15px;
 }
 
-main #eventbanner {
+/* 메인 - 이벤트배너 */
+
+#eventbanner {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -71,27 +77,29 @@ main #eventbanner {
     position: relative;
 }
 
-main #eventbanner a {
-    display: flex; /* 부모 요소를 flex로 변경 */
-    justify-content: center; /* 내부 비디오를 중앙 정렬 */
-    align-items: center; /* 내부 비디오를 중앙 정렬 */
-    border-radius: 15px;
-    margin: 0; /* 여백 제거 */
-    padding: 0; /* 여백 제거 */
+#eventbanner video {
+    width: 900px;
+    height: 70%;
+    border-radius: 7px;
+    margin: 0; 
+    padding: 0; 
 }
 
-main #eventbanner div{
+#eventbanner .inVideoText{
     position: absolute;
-    transform: translate(-170px, 110px); /* 수평 이동을 조정하여 더 왼쪽으로 */
+    transform: translate(-260px, 150px); /* 수평 이동을 조정하여 더 왼쪽으로 */
     z-index: 1; /* 비디오 위에 표시되도록 설정 */
     pointer-events: none; /* 클릭 이벤트 무시 (필요 시) */
 }
-main #eventbanner div h2{
+#eventbanner .inVideoText .iVTh2{
     font-size: 40px;
     color: white;
     line-height: 45px;
 }
-main #eventbanner div h3{
+#eventbanner .inVideoText .iVTh2 span{
+    color: rgb(130, 173, 255);
+}
+#eventbanner .inVideoText .iVTh3{
     transform: translate(-5px);
     margin-top: 3px;
     font-size: 20px;
@@ -99,14 +107,132 @@ main #eventbanner div h3{
 }
 
 
-main #eventbanner video {
-    width: 720px;
-    height: 70%;
-    border-radius: 7px;
-    margin: 0; /* 여백 제거 */
-    padding: 0; /* 여백 제거 */
+/* 사이 텍스트 */
+
+#text{
+    text-align: center;
+    font-family: 휴먼편지체;
+    color: rgb(76, 62, 31);
+}
+#text h2{
+    margin: 80px 0 20px 0;
+    font-size: 17px;
+}
+#text p{
+    line-height: 25px;
+    margin-bottom: 80px;
 }
 
+
+
+/* 메인 - 상품 배너 */
+
+main h1{
+    font-size: 20px;
+    margin-left: 100px;
+}
+main h1::before {
+    content: "\f521"; /* Font Awesome 유니코드 */
+    font-family: 'FontAwesome'; /* Font Awesome 폰트 패밀리 설정 */
+    margin-right: 0.5rem; /* 아이콘과 텍스트 사이 여백 */
+    font-size: inherit; /* 부모 요소의 폰트 크기 상속 */
+}
+
+main #mainbox {
+    display: flex;
+    align-items: center; /* 수직 가운데 정렬 */
+    height: 100vh; /* 높이 설정 (예시로 100vh 사용) */
+    flex-wrap: wrap; /* 아이템을 여러 줄로 감싸기 위해 추가 */
+    justify-content: center; /* 가로로 중앙 정렬 */
+    margin-bottom: 700px;
+}
+
+main #mainbox #items {
+    background-color: #fff;
+    width: 250px;
+    margin: 10px;
+    border-radius: 4px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-decoration: none;
+    gap: 5px;
+    padding: 10px;
+}
+
+main #mainbox #items img {
+    width: 100%;
+    height: 300px;
+    border-radius: 4px;
+}
+
+main #mainbox #items .sales_color {
+    color: lightcoral;
+    font-family: 휴먼편지체;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+main #mainbox #items s {
+    color: gray;
+    font-family: 휴먼편지체;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+main #mainbox #items .price {
+    font-family: 휴먼편지체;
+    font-weight: bold;
+}
+
+main #mainbox #items .discount_rate {
+    color: lightcoral;
+    font-family: 휴먼편지체;
+    font-weight: bold;
+}
+
+main #mainbox #items .name {
+    font-size: 13px;
+    font-weight: bold;
+}
+
+main #mainbox #items .name a {
+    color: #000;
+    text-decoration: none;
+}
+
+main #mainbox #items .name a:hover {
+    color: lightcoral;
+}
+
+main #mainbox #items .brand {
+    font-size: 12px;
+    color: gray;
+}
+
+#mainbox #swipeBtn{
+    background-color: #4a4e69;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    border-radius: 50px;
+}
+#swipeBtn::after {
+    content: "\f105";
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 4em;
+    line-height: 28px;
+    color: #fff;
+}
+
+.js-tilt-glare {
+    border-radius: 18px;
+}
+
+/* 푸터 스타일 */
 #footer .notice_Area{
     width: 95%;
     margin: 0 auto;
@@ -162,65 +288,4 @@ main #eventbanner video {
 .corp_area .addr a, a:visited{
     color: #e2e2e2;
     text-decoration: none;
-}
-main #mainbox{
-    display: flex;
-    align-items: center; /* 수직 가운데 정렬 */
-    height: 100vh; /* 높이 설정 (예시로 100vh 사용) */
-
-
-}
-main #mainbox div{
-    width: 300px;
-    margin-right: 100px;
-    
-}
-main #mainbox div img{
-    width: 300px;
-    height: 300px;
-}
-main #mainbox div p{
-    text-align: center;
-}
-main #mainbox div .name{
-    font-size: 12px;
-}
-main #mainbox div .original_price{
-    text-decoration: line-through;
-    color: #ccc;
-    font-size: 14px;
-}
-.discount-container{
-    text-align: center;
-}
-.discount-container p {
-    display: inline-block;
-    vertical-align: middle;
-    
-}
-
-main #mainbox div .discount-container .discount_rate{
-    color: red;
-    font-weight: bold;
-}
-main #mainbox div .discount-container .price{
-    color: black;
-    font-weight: bold;
-}
-#mainbox #swipeBtn{
-    background-color: #4a4e69;
-    width: 100px;
-    height: 100px;
-    text-align: center;
-    border-radius: 50px;
-
-}
-#swipeBtn::after {
-    content: "\f105";
-    font-family: FontAwesome;
-    font-weight: normal;
-    font-style: normal;
-    font-size: 4em;
-    line-height: 28px;
-    color: #fff;
 }
