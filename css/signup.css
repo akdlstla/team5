@@ -1,0 +1,163 @@
+@charset "UTF-8";body,button,dd,dl,dt,fieldset,form,h1,h2,h3,h4,h5,h6,input,legend,li,ol,p,select,table,td,textarea,th,ul {
+    margin: 0;
+    padding: 0;
+    -webkit-text-size-adjust: none;
+}
+footer{
+    width: 100%;
+    margin-top: 30px;
+}
+
+html{
+    height: 100%;
+    font-size: 14px;
+}
+.content{
+    width: 100%;
+}
+
+
+/* header */
+.header{
+    padding-bottom: 48px;
+    box-sizing: border-box;
+}
+.header .header_inner {
+    position: relative;
+    width: 743px;
+    margin: 0 auto;
+    text-align: center;
+    box-sizing: border-box
+}
+@media (max-width: 742px) {
+    .header .header_inner {
+        width:auto;
+        margin: 0 40px
+    }
+}
+.header .logo {
+    position: relative;
+    display: inline-block;
+    margin-top: 30px;
+    vertical-align: top;
+    background-position: 0 -51px;
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 180px;
+    
+}
+.logo_size{
+    position: relative;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+}
+
+/* 회원가입 메인 wrap */
+.signup_wrap{
+    box-sizing: border-box;
+    width: 600px;
+    margin: 0 auto;
+}
+.panel_wrap{
+    border: 1px solid #c6c6c6;
+    border-radius: 6px;
+    background-color: #fff;
+    box-shadow: 0 5px 8px 0 rgba(68, 68, 68, .04);
+}
+.panel_inner{
+    padding:30px 40px;
+}
+.signup_info{
+    margin: 5px 0 40px;
+    font-weight: 600;
+}
+.signup_text{
+    font-weight:500;
+}
+.signup_table {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: auto;      
+}
+.signup_input {
+    width: 98%;
+    height: 40px;
+    margin: 3px 0 7px;
+    font-size: 15px;
+    border: 0;
+    border-radius: 6px;
+    outline: none;
+    padding-left: 10px;
+    background-color: rgb(233,233,233);
+}
+.signup_id{
+    position:relative;
+    width: 76%;;
+    margin-right: 5px;
+}
+
+.id_check_btn{
+    width: 20%;
+    height: 40px;
+    margin: auto 0;
+    color: lightgray;
+    background-color: #333;
+    border-radius: 6px;
+    border: 1px solid #444;
+    box-sizing: border-box;
+}
+.signup_email {
+    width: 30%;
+    height: 40px;
+    font-size: 15px;
+    border: 0;
+    border-color: lightgray;
+    border-radius: 6px;
+    outline: none;
+    padding-left: 10px;
+    background-color: rgb(233,233,233);
+}
+.signup_email_input{
+    width: 30%;
+    margin-right: 8px;
+}
+.signup_email_select{
+    width: 30%;
+    height: 40px;
+    font-size: 15px;
+    border: 0;
+    border-color: lightgray;
+    border-radius: 6px;
+    outline: none;
+    padding-left: 10px;
+    background-color: rgb(233,233,233);
+}
+.signup_btn{
+    display: block;
+    width: 100%;
+    padding: 13px 0 13px;
+    color: lightgray;
+    background-color: #333;
+    border-radius: 6px;
+    border: 1px solid #444;
+    box-sizing: border-box;
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 700;
+    margin-top: 20px;
+
+}
+
+/* 전체 설정 */
+.wrap{
+    position: relative;
+    height: 100%;
+    letter-spacing: -.5px;
+}
+body{
+    height: 100%;
+}
