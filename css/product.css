@@ -1,12 +1,12 @@
 main{
     width: 1000px;
-    margin: 0 auto;
+    margin: 100px auto;
 }
 #product{
     display: flex;
 }
 #product img{
-    width: 50%;
+    width: 45%;
     height: auto;
 }
 
@@ -16,8 +16,9 @@ main{
 }
 #product #product_price{
     margin-top: 20px;
-    margin-left: 150px;
+    justify-content: right;
     display: flex;
+
 }
 #product #product_price p{
     font-size: 26px;
@@ -30,4 +31,71 @@ main{
 #original_price{
     text-decoration: line-through;
     color: #ccc;
+}
+#option{
+    margin-top: 260px;
+}
+#option p{
+    font-size: 18px;
+    font-weight: 700px;
+    text-align: right;
+}
+#option form{
+    text-align: right;
+}
+#option form select{
+    width: 400px;
+    height: 40px;
+    margin-top: 10px;
+    padding-left: 10px;
+}
+#btn_box{
+    display: flex;
+    justify-content: right;
+    margin-top: 30px;
+    align-items: center; /* 수직 가운데 정렬 */
+    border-radius: 5px;
+
+}
+
+#btn_box a, a:hover{
+    color: aliceblue;
+    text-decoration: none;
+}
+#basket{
+    width: 200px;
+    height: 40px;
+    background-color: #4a4e69;
+    display: flex;
+    justify-content: center; /* 수평 가운데 정렬 */
+    align-items: center; /* 수직 가운데 정렬 */
+    border-radius: 5px;
+}
+
+
+#order{
+    width: 200px;
+    height: 40px;
+    background-color:#4a4e69;
+    display: flex;
+    justify-content: center; /* 수평 가운데 정렬 */
+    align-items: center; /* 수직 가운데 정렬 */
+    margin-left: 15px;
+    border-radius: 5px;
+}
+
+#detail_button{
+    margin: 50px auto;
+    width: 100%;
+    height: 40px;
+    background-color:white;
+    display: flex;
+    border: #4a4e69 2px solid;
+    border-radius: 5px;
+    justify-content: center; /* 수평 가운데 정렬 */
+    align-items: center; /* 수직 가운데 정렬 */
+    color: #4a4e69;
+}
+#detail_image{
+    text-align: center;
 }
