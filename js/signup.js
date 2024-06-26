@@ -77,6 +77,7 @@ function handleEmailValidation(event) {
 
     if (emailVal.length < 7) {
         emailvalue = '7자 이상 적어주세요';
+        emailMessage.style.color='red'
         emailMessage.textContent=emailvalue;
     } else {
         if (emailIVal.includes('gmail.com') || emailIVal.includes('daum.net') || emailIVal.includes('naver.com') || emailIVal.includes('nate.com')) {
@@ -90,6 +91,7 @@ function handleEmailValidation(event) {
         } else {
             emailvalue = '이메일을 입력 또는 선택해주세요';
             emailMessage.textContent = emailvalue;
+            emailMessage.style.color='red'
         }
     }
     console.log(emailvalue);
