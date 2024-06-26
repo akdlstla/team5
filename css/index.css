@@ -148,10 +148,11 @@ header #category ul li #signUp{
 
 
 /* 메인 - 상품 배너 */
-
+ main{ width: 1000px;
+margin: 0 auto;}
 main h1{
     font-size: 20px;
-    margin-left: 100px;
+    margin-left: 20px;
 }
 main h1::before {
     content: "\f521"; /* Font Awesome 유니코드 */
@@ -161,12 +162,10 @@ main h1::before {
 }
 
 main #mainbox {
-    display: flex;
-    align-items: center; /* 수직 가운데 정렬 */
-    height: 100vh; /* 높이 설정 (예시로 100vh 사용) */
-    flex-wrap: wrap; /* 아이템을 여러 줄로 감싸기 위해 추가 */
-    justify-content: center; /* 가로로 중앙 정렬 */
-    margin-bottom: 700px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(20%, auto));
+    gap: 20px; /* 상품 사이의 간격을 조정할 수 있습니다 */
+    margin-bottom: 100px;
 }
 
 main #mainbox #items {
