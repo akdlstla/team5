@@ -83,10 +83,10 @@ header #category ul li #signUp{
 /* 로고 스타일 */
 
 #headerLogo{ 
-    width: 90px;
+    width: 150px;
     height: 100%;
     padding-top: 10px;
-    padding-left: 15px;
+    padding-left: 100px;
 }
 
 /* 메인 - 이벤트배너 */
