@@ -14,20 +14,31 @@ let pw_value = false;
 let emailvalue = '';
 
 signup_btn.addEventListener('click', (event) => {
-    const idVal = idIn.value;
-    const pwVal = pwIn.value;
-    const nameVal = nameIn.value;
-    const dateVal = dateIn.value;
+    const idVal = idIn.value.trim();
+    const pwVal = pwIn.value.trim();
+    const rePwVal = rePwIn.value.trim();
+    const nameVal = nameIn.value.trim();
+    const dateVal = dateIn.value.trim();
     const logInVal = false;
-    if (emailvalue !== '사용불가' && id_value === true && pw_value === true) {
+
+    if (
+        emailvalue !== '사용불가' && 
+        id_value === true && 
+        pw_value === true &&
+        idVal !== '' && idVal !== null &&
+        pwVal !== '' && pwVal !== null &&
+        nameVal !== '' && nameVal !== null &&
+        dateVal !== '' && dateVal !== null &&
+        rePwVal === pwVal
+    ) {
         const user = {
             name: nameVal,
             id: idVal,
             pw: pwVal,
             date: dateVal,
             email: emailvalue,
-            logIn:logInVal,
-            keep:false,
+            logIn: logInVal,
+            keep: false,
         };
         console.log(user);
         const userObj = JSON.stringify(user);
@@ -35,8 +46,11 @@ signup_btn.addEventListener('click', (event) => {
         window.localStorage.setItem(`user${length}`, userObj);
         alert('회원가입 성공하셨습니다!');
         window.location.href = './login.html';
+    } else {
+        alert('모든 필드를 올바르게 입력해주세요.');
     }
 });
+
 
 form.addEventListener('submit', (event) => {
     event.preventDefault();
@@ -46,20 +60,36 @@ emailIn.addEventListener('input', handleEmailValidation);
 emailIIn.addEventListener('input', handleEmailValidation);
 emailSIn.addEventListener('change', handleEmailValidation);
 
-function handleEmailValidation() {
+function handleEmailValidation(event) {
+    console.log(event)
     const emailVal = emailIn.value;
     const emailIVal = emailIIn.value;
     const emailSVal = emailSIn.value;
+    const emailMessage = document.querySelector('.email_message');
+
+
+    // 하나의 입력이 발생할 때 다른 입력을 초기화
+    if (event.target === emailIIn) {
+        emailSIn.value = '';
+    } else if (event.target === emailSIn) {
+        emailIIn.value = '';
+    }
 
     if (emailVal.length < 7) {
-        emailvalue = '사용불가';
+        emailvalue = '7자 이상 적어주세요';
+        emailMessage.textContent=emailvalue;
     } else {
         if (emailIVal.includes('gmail.com') || emailIVal.includes('daum.net') || emailIVal.includes('naver.com') || emailIVal.includes('nate.com')) {
             emailvalue = `${emailVal}@${emailIVal}`;
+            emailMessage.textContent='이메일이 잘 입력됐습니다.';
+            emailMessage.style.color='green'
         } else if (emailSVal.includes('gmail.com') || emailSVal.includes('daum.net') || emailSVal.includes('naver.com') || emailSVal.includes('nate.com')) {
             emailvalue = `${emailVal}@${emailSVal}`;
+            emailMessage.textContent='이메일이 잘 입력됐습니다.';
+            emailMessage.style.color='green'
         } else {
-            emailvalue = '사용불가';
+            emailvalue = '이메일을 입력 또는 선택해주세요';
+            emailMessage.textContent = emailvalue;
         }
     }
     console.log(emailvalue);
