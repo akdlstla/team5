@@ -7,6 +7,7 @@ main{
     color: gray;
     margin: 10px 0px;
 }
+
 #product{
     display: flex;
 }
@@ -38,7 +39,7 @@ main{
     color: #ccc;
 }
 #option{
-    margin-top: 260px;
+    margin-top: 160px;
 }
 #option p{
     font-size: 18px;
@@ -123,4 +124,47 @@ main{
     font-family: 'Cafe24Moyamoya-Regular-v1.0';
     font-size: 18px;
     font-weight: 400;
+}
+#mid{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+#star{
+    display: flex;
+    justify-content: center;
+    color: #ccc;
+    align-items: center;
+}
+#star img{
+width: 75%;
+}
+#comment{
+    font-weight: 600;
+    color: rgb(109, 109, 249);
+}
+#case{
+    width: 65%;
+    position: relative;
+    top: 140px;
+    left: 190px;
+    border-top: #ccc 1px solid;
+    border-bottom: #ccc 1px solid;
+    padding: 10px 0px;
+
+}
+#card {
+    font-family: FontAwesome;
+    font-size: 2em;
+    color: #4a4e69;
+    margin-right: 10px;
+}
+#cardbox{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+#card_text{
+    font-size: 14px;
+    font-family: 'Cafe24Moyamoya-Regular-v1.0';
 }
