@@ -12,14 +12,13 @@ window.addEventListener('load', () => {
             // 로그인 상태가 유지되어야 할 경우 id와 pw를 입력란에 표시
             idIn.value = userData.id;
             pwIn.value = userData.pw;
+            userData.keep=false;
             // keep.checked 상태에 따라 스타일 적용
             if (userData.keep) {
                 keep.value = 'on';
-                // document.querySelector('.keep_check .keep_text').style.color = '#333';
-                updateKeepState(false);
+                updateKeepState(true);
             } else {
                 keep.value = 'off';
-                // document.querySelector('.keep_check .keep_text').style.color = '#777';
                 updateKeepState(false);
             }
             return;
