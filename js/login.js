@@ -13,6 +13,7 @@ window.addEventListener('load', () => {
             idIn.value = userData.id;
             pwIn.value = userData.pw;
             userData.keep=false;
+            //f
             // keep.checked 상태에 따라 스타일 적용
             if (userData.keep) {
                 keep.value = 'on';
